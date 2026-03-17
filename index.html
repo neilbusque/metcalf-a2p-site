@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Schedule Your Retirement Clarity Call — Metcalf Partners</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-dark: #A8852A;
+      --gold-light: #E2C97E;
+      --gold-bg: #FBF6E8;
+      --gray-900: #1C1C1C;
+      --gray-800: #2D2D2D;
+      --gray-700: #3D3D3D;
+      --gray-500: #6B6B6B;
+      --gray-300: #C4C4C4;
+      --gray-100: #F5F5F5;
+      --white: #FFFFFF;
+      --error: #C0392B;
+      --error-bg: #FEF2F2;
+      --success: #1A7A4A;
+      --success-bg: #ECFDF5;
+      --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius: 6px;
+      --radius-lg: 12px;
+      --radius-xl: 20px;
+      --shadow-card: 0 8px 40px rgba(0,0,0,0.14);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--gray-900);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-dark); text-decoration: underline; }
+
+    .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ─── NAV ─────────────────────────────── */
+    .site-nav {
+      background: var(--white);
+      border-bottom: 1px solid #EBEBEB;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .nav-gold-bar {
+      width: 4px;
+      height: 32px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+    .nav-brand-text {}
+    .nav-firm { font-family: var(--font-display); font-size: 1.125rem; font-weight: 700; color: var(--gray-900); line-height: 1.2; }
+    .nav-sub { font-size: 0.7rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-tagline { font-size: 0.8125rem; color: var(--gray-500); display: none; }
+    .nav-phone {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+    .nav-phone:hover { color: var(--gold); text-decoration: none; }
+    .nav-phone-icon { color: var(--gold); font-size: 0.875rem; }
+    @media (min-width: 640px) { .nav-tagline { display: block; } }
+
+    /* ─── HERO ────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      background-color: var(--gray-800);
+      background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=80');
+      background-size: cover;
+      background-position: center top;
+      padding: 5rem 0 4rem;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(28,28,28,0.92) 0%, rgba(28,28,28,0.75) 55%, rgba(28,28,28,0.4) 100%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .hero-inner { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.375rem 0.875rem;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+    .eyebrow-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+    .hero-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .hero-content h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-content p {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8125rem;
+    }
+    .trust-badge-icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(201,168,76,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    /* ─── FORM CARD ───────────────────────── */
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem 2rem;
+      box-shadow: var(--shadow-card);
+      border-top: 4px solid var(--gold);
+    }
+    .form-card-header { margin-bottom: 1.5rem; }
+    .form-card-eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 0.375rem;
+    }
+    .form-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1.3;
+    }
+    .form-card-sub { font-size: 0.875rem; color: var(--gray-500); margin-top: 0.375rem; }
+
+    .form-group { margin-bottom: 0.875rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 0.3rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #DCDCDC;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--gray-900);
+      background: var(--white);
+      transition: border-color 0.18s, box-shadow 0.18s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.14);
+    }
+    .form-group input.field-invalid { border-color: var(--error); }
+    .form-group input::placeholder { color: #B0B0B0; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+    @media (max-width: 420px) { .form-row { grid-template-columns: 1fr; } }
+    .field-error-msg { font-size: 0.75rem; color: var(--error); margin-top: 0.25rem; display: none; }
+    .field-error-msg.show { display: block; }
+
+    .form-divider {
+      height: 1px;
+      background: #EBEBEB;
+      margin: 1rem 0;
+    }
+    .consent-label-text {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gray-500);
+      margin-bottom: 0.625rem;
+    }
+
+    .consent-box {
+      background: #FAFAFA;
+      border: 1px solid #E8E8E8;
+      border-radius: var(--radius);
+      padding: 0.875rem;
+      margin-bottom: 0.625rem;
+    }
+    .consent-box.sms-box-form { background: var(--gold-bg); border-color: rgba(201,168,76,0.3); }
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      cursor: pointer;
+    }
+    .checkbox-row input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      min-width: 17px;
+      accent-color: var(--gold);
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .checkbox-text { font-size: 0.8125rem; color: var(--gray-700); line-height: 1.5; }
+    .checkbox-text a { color: var(--gold); text-decoration: underline; }
+    .consent-error { font-size: 0.75rem; color: var(--error); margin-top: 0.2rem; display: none; }
+    .consent-error.show { display: block; }
+
+    .a2p-disclosure {
+      font-size: 0.6875rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      padding: 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      border: 1px solid #E8E8E8;
+    }
+    .a2p-disclosure a { color: var(--gold); }
+
+    .btn-submit {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: var(--gold);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.18s, transform 0.1s, box-shadow 0.18s;
+      letter-spacing: 0.025em;
+      position: relative;
+    }
+    .btn-submit:hover:not(:disabled) {
+      background: var(--gold-dark);
+      box-shadow: 0 4px 14px rgba(168,133,42,0.35);
+    }
+    .btn-submit:active:not(:disabled) { transform: scale(0.985); }
+    .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+    .btn-submit.loading { color: transparent; }
+    .btn-submit.loading::after {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 18px; height: 18px;
+      margin: -9px 0 0 -9px;
+      border: 2.5px solid rgba(255,255,255,0.35);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .btn-sub { font-size: 0.75rem; color: var(--gray-500); text-align: center; margin-top: 0.625rem; }
+
+    .form-feedback {
+      display: none;
+      padding: 0.875rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 0.875rem;
+    }
+    .form-feedback.success { display: block; background: var(--success-bg); color: var(--success); border: 1px solid var(--success); }
+    .form-feedback.error { display: block; background: var(--error-bg); color: var(--error); border: 1px solid var(--error); }
+
+    /* ─── TRUST STRIP ─────────────────────── */
+    .trust-strip {
+      background: var(--gray-900);
+      padding: 1.25rem 0;
+      border-bottom: 3px solid var(--gold);
+    }
+    .trust-strip-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem 2.5rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .trust-item-icon { color: var(--gold); font-size: 0.875rem; }
+    .trust-divider { color: rgba(255,255,255,0.2); font-size: 1.25rem; }
+    @media (max-width: 480px) { .trust-divider { display: none; } }
+
+    /* ─── DISCOVER SECTION ────────────────── */
+    .discover {
+      padding: 5rem 0;
+      background: var(--white);
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: var(--gray-900);
+      line-height: 1.2;
+      margin-bottom: 0.875rem;
+    }
+    .section-sub {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .discover-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) { .discover-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .discover-card {
+      padding: 1.875rem;
+      border: 1px solid #EBEBEB;
+      border-radius: var(--radius-lg);
+      transition: box-shadow 0.2s, transform 0.2s;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .discover-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .discover-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .discover-card:hover::before { opacity: 1; }
+
+    .discover-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gold-bg);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      -webkit-text-stroke: 1px var(--gold-light);
+    }
+    .discover-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.625rem;
+      line-height: 1.3;
+    }
+    .discover-card p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    /* ─── ABOUT SECTION ───────────────────── */
+    .about {
+      background: var(--gray-100);
+      padding: 5rem 0;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    @media (min-width: 800px) { .about-inner { grid-template-columns: 1fr 1fr; } }
+
+    .about-image-wrap { position: relative; }
+    .about-photo {
+      width: 100%;
+      max-width: 480px;
+      height: 480px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+    }
+    .about-photo-placeholder {
+      width: 100%;
+      max-width: 480px;
+      height: 480px;
+      background: linear-gradient(135deg, #3D3D3D 0%, #2D2D2D 100%);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.875rem;
+      gap: 1rem;
+    }
+    .about-photo-initials {
+      width: 80px;
+      height: 80px;
+      background: rgba(201,168,76,0.2);
+      border: 2px solid rgba(201,168,76,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+    .about-accent-bar {
+      position: absolute;
+      bottom: -1.25rem;
+      right: -1.25rem;
+      width: 80%;
+      height: 80%;
+      border: 3px solid var(--gold);
+      border-radius: var(--radius-lg);
+      z-index: -1;
+      opacity: 0.4;
+    }
+    @media (max-width: 799px) { .about-accent-bar { display: none; } }
+
+    .about-content {}
+    .about-content .section-heading { margin-bottom: 0.5rem; }
+    .about-name {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .about-content p {
+      font-size: 1rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .about-credentials {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      margin-top: 1.75rem;
+    }
+    .about-credentials li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+    .cred-icon {
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      background: var(--gold-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-dark);
+      font-size: 0.625rem;
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    /* ─── CTA STRIP ───────────────────────── */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-strip::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+    }
+    .cta-strip-inner { text-align: center; }
+    .cta-strip h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.875rem;
+    }
+    .cta-strip h2 em { font-style: italic; color: var(--gold-light); }
+    .cta-strip p { font-size: 1.0625rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .btn-cta-strip {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--gold);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.18s, box-shadow 0.18s;
+      letter-spacing: 0.025em;
+    }
+    .btn-cta-strip:hover { background: var(--gold-dark); box-shadow: 0 4px 16px rgba(168,133,42,0.4); text-decoration: none; color: var(--white); }
+    .cta-strip-sub { font-size: 0.8125rem; color: rgba(255,255,255,0.45); margin-top: 1rem; }
+
+    /* ─── FOOTER ──────────────────────────── */
+    .site-footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,0.55);
+      padding: 2.5rem 0;
+      font-size: 0.8125rem;
+      margin-top: auto;
+    }
+    .footer-inner { display: flex; flex-direction: column; gap: 0.875rem; align-items: center; text-align: center; }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.375rem;
+    }
+    .footer-brand-bar { width: 3px; height: 24px; background: var(--gold); border-radius: 2px; }
+    .footer-firm-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: rgba(255,255,255,0.75); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--gold-light); text-decoration: none; }
+    .footer-ria { color: rgba(255,255,255,0.4); font-size: 0.75rem; max-width: 580px; line-height: 1.6; }
+    .footer-legal { color: rgba(255,255,255,0.3); font-size: 0.6875rem; line-height: 1.55; max-width: 560px; }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-gold-bar"></div>
+          <div class="nav-brand-text">
+            <div class="nav-firm">Metcalf Partners</div>
+            <div class="nav-sub">Wealth Management</div>
+          </div>
+        </a>
+        <div class="nav-right">
+          <span class="nav-tagline">Overland Park, Kansas</span>
+          <a href="tel:9132143728" class="nav-phone">
+            <span class="nav-phone-icon">&#9742;</span>
+            (913) 214-3728
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            Complimentary 45-Minute Call
+          </div>
+          <h1>Retirement is closer than you think.<br><em>Are you ready?</em></h1>
+          <p>Most people spend more time planning a vacation than they do planning retirement. If you're within 1–5 years of leaving work, one conversation can change everything. You'll leave with a clear picture and a real plan.</p>
+          <div class="hero-trust">
+            <div class="trust-badge">
+              <div class="trust-badge-icon">&#128200;</div>
+              Social Security Optimization
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">&#128203;</div>
+              Retirement Income Planning
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">&#128305;</div>
+              Medicare Strategy
+            </div>
+          </div>
+        </div>
+
+        <!-- Opt-In Form -->
+        <div class="form-card" id="opt-in-form-card">
+          <div class="form-card-header">
+            <p class="form-card-eyebrow">Free Consultation</p>
+            <h2>Schedule Your Retirement Clarity Call</h2>
+            <p class="form-card-sub">No cost. No pressure. Just clarity.</p>
+          </div>
+
+          <form id="opt-in-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name">
+                <div class="field-error-msg" id="firstName-error">Required.</div>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name">
+                <div class="field-error-msg" id="lastName-error">Required.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email">
+              <div class="field-error-msg" id="email-error">Please enter a valid email.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Mobile Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(913) 555-0100" autocomplete="tel">
+              <div class="field-error-msg" id="phone-error">Please enter a valid US phone number.</div>
+            </div>
+
+            <div class="form-divider"></div>
+            <p class="consent-label-text">Consent &amp; Agreements</p>
+
+            <!-- Checkbox 1: SMS Consent — REQUIRED for A2P -->
+            <div class="consent-box sms-box-form">
+              <label class="checkbox-row">
+                <input type="checkbox" id="smsConsent" name="smsConsent">
+                <span class="checkbox-text">
+                  I agree to receive text messages from Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners) about Metcalf Partners Financial Updates, including appointment reminders and financial planning tips.
+                </span>
+              </label>
+              <div class="consent-error" id="sms-consent-error">SMS consent is required to continue.</div>
+            </div>
+
+            <!-- Checkbox 2: Terms & Privacy -->
+            <div class="consent-box">
+              <label class="checkbox-row">
+                <input type="checkbox" id="termsConsent" name="termsConsent">
+                <span class="checkbox-text">
+                  I have read and agree to the <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms &amp; Conditions</a>, and I consent to be contacted by Metcalf Partners by phone and email.
+                </span>
+              </label>
+              <div class="consent-error" id="terms-consent-error">You must agree to the terms to continue.</div>
+            </div>
+
+            <!-- A2P Required Disclosure -->
+            <div class="a2p-disclosure">
+              By checking the SMS box above and submitting this form, you consent to receive automated SMS text messages from <strong>Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners)</strong> at the mobile number you provided. Messages relate to Metcalf Partners Financial Updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. Reply HELP for help. Carriers are not liable for delayed or undelivered messages. Your information will not be sold or shared with third parties for marketing purposes.
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">Book My Call Now &#8594;</button>
+            <p class="btn-sub">Takes 60 seconds &bull; No commitment required</p>
+            <div class="form-feedback" id="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-strip-inner">
+        <div class="trust-item">
+          <span class="trust-item-icon">&#10003;</span>
+          Serving Pre-Retirees in the Kansas City Area
+        </div>
+        <span class="trust-divider">/</span>
+        <div class="trust-item">
+          <span class="trust-item-icon">&#10003;</span>
+          Investment Management, Tax &amp; Estate Planning
+        </div>
+        <span class="trust-divider">/</span>
+        <div class="trust-item">
+          <span class="trust-item-icon">&#10003;</span>
+          Registered Investment Adviser
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What You'll Discover -->
+  <section class="discover">
+    <div class="container">
+      <span class="section-tag">What We'll Cover on Your Call</span>
+      <h2 class="section-heading">Answers to the questions<br>keeping you up at night</h2>
+      <p class="section-sub">Most people walk into retirement with 3 big unknowns still unresolved. Your Retirement Clarity Call tackles all three in 45 minutes.</p>
+      <div class="discover-grid">
+        <div class="discover-card">
+          <div class="discover-num">01</div>
+          <h3>When to Claim Social Security</h3>
+          <p>Claiming too early can cost you tens of thousands of dollars over a lifetime. We'll show you the numbers for your specific situation so you know the right window to claim.</p>
+        </div>
+        <div class="discover-card">
+          <div class="discover-num">02</div>
+          <h3>How to Replace Your Paycheck</h3>
+          <p>Your savings are not a paycheck. We'll show you how to build a reliable income stream from your portfolio, Social Security, and any other sources you have. You get a clear monthly number you can count on.</p>
+        </div>
+        <div class="discover-card">
+          <div class="discover-num">03</div>
+          <h3>Your Medicare Coverage Options</h3>
+          <p>Medicare has more moving parts than most people realize. We'll walk through your options before your enrollment window opens so you pick the right plan from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-image-wrap">
+          <img src="jeb-graham.jpg" alt="Jeb Graham, CEO &amp; Managing Partner, Metcalf Partners Wealth Management" class="about-photo">
+          <div class="about-accent-bar"></div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">About Metcalf Partners</span>
+          <h2 class="section-heading">We specialize in the years that matter most</h2>
+          <span class="about-name">Jeb Graham, CEO &amp; Managing Partner</span>
+          <p>The 5 years before retirement and the first 5 years after it are the most financially important of your life. Claiming Social Security too early, picking the wrong Medicare plan, drawing from your portfolio in the wrong order. Any one of those mistakes can follow you for 30 years.</p>
+          <p>Jeb Graham and the Metcalf Partners team have spent years helping pre-retirees in the greater Kansas City area build retirement plans that hold up. Not just in the good years. In all of them.</p>
+          <p>Their approach is comprehensive: investment management, Social Security optimization, Medicare strategy, tax planning, and estate planning. All under one roof. All built around your specific situation.</p>
+          <ul class="about-credentials">
+            <li>
+              <div class="cred-icon">&#10003;</div>
+              Serving pre-retirees with $750K to $5M in investable assets
+            </li>
+            <li>
+              <div class="cred-icon">&#10003;</div>
+              Comprehensive retirement planning: income, Social Security, Medicare, taxes, and estate
+            </li>
+            <li>
+              <div class="cred-icon">&#10003;</div>
+              Overland Park, KS, serving the greater Kansas City area
+            </li>
+            <li>
+              <div class="cred-icon">&#10003;</div>
+              Registered Investment Adviser, fiduciary standard
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Strip -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-strip-inner">
+        <h2>Stop guessing.<br><em>Get a real plan.</em></h2>
+        <p>Your Retirement Clarity Call is complimentary and no-commitment. You'll leave with a clear picture of where you stand and exactly what to do next.</p>
+        <a href="#opt-in-form-card" class="btn-cta-strip">Schedule Your Free Call</a>
+        <p class="cta-strip-sub">Takes 60 seconds to book &bull; Complimentary 45-minute consultation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-brand-bar"></div>
+          <span class="footer-firm-name">Metcalf Partners Wealth Management</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <a href="mailto:jeb.graham@metcalfpartners.com">jeb.graham@metcalfpartners.com</a>
+          <a href="tel:9132143728">(913) 214-3728</a>
+        </div>
+        <p class="footer-ria">Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners) is a registered investment adviser. Registration with the SEC or a state securities authority does not imply a certain level of skill or training.</p>
+        <p class="footer-legal">
+          This website is for informational purposes only and does not constitute investment advice. Nothing on this page is a solicitation or recommendation to buy or sell any security.
+          &copy; Jebtha C. Graham Wealth Management, LLC. All rights reserved. | 6800 College Blvd, Suite 320, Overland Park, KS 66211
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/zUMKkYbTQcc7fecXhkIK/webhook-trigger/56d3df9b-83b6-4708-abd6-2bfa6c12a133';
+
+  const form = document.getElementById('opt-in-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const feedback = document.getElementById('form-feedback');
+
+  function validateEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+  function validatePhone(p) { return p.replace(/\D/g,'').length >= 10; }
+
+  function setFieldError(fieldId, errorId, show) {
+    const f = document.getElementById(fieldId);
+    const e = document.getElementById(errorId);
+    show ? (f.classList.add('field-invalid'), e.classList.add('show'))
+          : (f.classList.remove('field-invalid'), e.classList.remove('show'));
+    return !show;
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    feedback.className = 'form-feedback';
+    feedback.textContent = '';
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName  = document.getElementById('lastName').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const phone     = document.getElementById('phone').value.trim();
+    const smsOk     = document.getElementById('smsConsent').checked;
+    const termsOk   = document.getElementById('termsConsent').checked;
+
+    let valid = true;
+    valid = setFieldError('firstName','firstName-error', !firstName) && valid;
+    valid = setFieldError('lastName', 'lastName-error',  !lastName)  && valid;
+    valid = setFieldError('email',    'email-error',     !validateEmail(email)) && valid;
+    valid = setFieldError('phone',    'phone-error',     !validatePhone(phone)) && valid;
+
+    const smsErr   = document.getElementById('sms-consent-error');
+    const termsErr = document.getElementById('terms-consent-error');
+    if (!smsOk)   { smsErr.classList.add('show');   valid = false; }
+    else            smsErr.classList.remove('show');
+    if (!termsOk) { termsErr.classList.add('show'); valid = false; }
+    else            termsErr.classList.remove('show');
+
+    if (!valid) return;
+
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+
+    const payload = {
+      firstName, lastName, email, phone,
+      smsConsent: true, termsConsent: true,
+      source: 'a2p-opt-in-site',
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok || res.status === 200 || res.status === 201 || res.status === 202) {
+        window.location.href = 'thank-you.html';
+      } else {
+        throw new Error('status ' + res.status);
+      }
+    } catch(err) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+      feedback.className = 'form-feedback error';
+      feedback.textContent = 'Something went wrong. Please try again or call (913) 214-3728.';
+    }
+  });
+
+  ['firstName','lastName','email','phone'].forEach(function(id) {
+    document.getElementById(id).addEventListener('input', function() {
+      this.classList.remove('field-invalid');
+      const e = document.getElementById(id+'-error');
+      if (e) e.classList.remove('show');
+    });
+  });
+  document.getElementById('smsConsent').addEventListener('change', function() {
+    if (this.checked) document.getElementById('sms-consent-error').classList.remove('show');
+  });
+  document.getElementById('termsConsent').addEventListener('change', function() {
+    if (this.checked) document.getElementById('terms-consent-error').classList.remove('show');
+  });
+
+  // Scroll to form on CTA click
+  document.querySelector('.btn-cta-strip').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('opt-in-form-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Choose Your Time — Metcalf Partners</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-dark: #A8852A;
+      --gold-light: #E2C97E;
+      --gold-bg: #FBF6E8;
+      --gray-900: #1C1C1C;
+      --gray-800: #2D2D2D;
+      --gray-700: #3D3D3D;
+      --gray-500: #6B6B6B;
+      --gray-100: #F5F5F5;
+      --white: #FFFFFF;
+      --success: #1A7A4A;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --radius: 6px;
+      --radius-lg: 12px;
+      --shadow-card: 0 8px 40px rgba(0,0,0,0.12);
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--gray-900);
+      background: var(--gray-100);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-dark); text-decoration: underline; }
+
+    .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Nav */
+    .site-nav {
+      background: var(--white);
+      border-bottom: 1px solid #EBEBEB;
+      padding: 1rem 0;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .nav-gold-bar { width: 4px; height: 32px; background: var(--gold); border-radius: 2px; }
+    .nav-firm { font-family: var(--font-display); font-size: 1.125rem; font-weight: 700; color: var(--gray-900); line-height: 1.2; }
+    .nav-sub { font-size: 0.7rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; }
+    .nav-phone { font-size: 0.9375rem; font-weight: 600; color: var(--gray-800); text-decoration: none; }
+    .nav-phone:hover { color: var(--gold); text-decoration: none; }
+
+    /* Confirmation Hero */
+    .confirm-hero {
+      background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 3px solid var(--gold);
+    }
+    .confirm-hero-inner { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .confirm-check {
+      width: 64px;
+      height: 64px;
+      min-width: 64px;
+      background: rgba(201,168,76,0.15);
+      border: 2px solid rgba(201,168,76,0.45);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: var(--gold-light);
+    }
+    .confirm-text h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .confirm-text h1 em { font-style: italic; color: var(--gold-light); }
+    .confirm-text p { font-size: 1.0625rem; color: rgba(255,255,255,0.7); line-height: 1.65; }
+
+    /* Calendar Section */
+    .calendar-section {
+      padding: 3.5rem 0;
+      flex: 1;
+    }
+    .calendar-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .calendar-header {
+      background: var(--white);
+      padding: 1.75rem 2rem 0;
+      border-bottom: 1px solid #EBEBEB;
+    }
+    .calendar-header-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+    }
+    .calendar-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 0.375rem;
+    }
+    .calendar-title {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+    .calendar-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .cal-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--gray-500);
+    }
+    .cal-meta-icon { color: var(--gold); }
+
+    /* Calendar Embed Container */
+    .calendar-embed-container {
+      min-height: 700px;
+      position: relative;
+    }
+
+
+    /* What's Next */
+    .next-steps { padding: 3rem 0 4rem; }
+    .next-steps-inner { max-width: 680px; margin: 0 auto; }
+    .steps-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .steps-heading {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 2rem;
+    }
+    .step-list { display: flex; flex-direction: column; gap: 1rem; }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--white);
+      border: 1px solid #EBEBEB;
+      border-left: 3px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 1.125rem 1.25rem;
+    }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      background: var(--gold);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .step-body h4 { font-size: 0.9375rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.25rem; }
+    .step-body p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; }
+
+    /* Footer */
+    .site-footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,0.5);
+      padding: 2rem 0;
+      font-size: 0.8125rem;
+    }
+    .footer-inner { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; text-align: center; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-links a:hover { color: var(--gold-light); text-decoration: none; }
+    .footer-ria { color: rgba(255,255,255,0.35); font-size: 0.75rem; max-width: 560px; }
+    .footer-sms { color: rgba(255,255,255,0.3); font-size: 0.6875rem; }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- Nav -->
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-gold-bar"></div>
+          <div>
+            <div class="nav-firm">Metcalf Partners</div>
+            <div class="nav-sub">Wealth Management</div>
+          </div>
+        </a>
+        <a href="tel:9132143728" class="nav-phone">(913) 214-3728</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Confirmation Hero -->
+  <div class="confirm-hero">
+    <div class="container">
+      <div class="confirm-hero-inner">
+        <div class="confirm-check">&#10003;</div>
+        <div class="confirm-text">
+          <h1>You're all set.<br><em>Pick a time below.</em></h1>
+          <p>Your info was received. Now choose the day and time that works best for your Retirement Clarity Call with Jeb Graham.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar Booking -->
+  <section class="calendar-section">
+    <div class="container">
+      <div class="calendar-wrap">
+        <div class="calendar-header">
+          <div class="calendar-header-inner">
+            <div>
+              <p class="calendar-label">Step 2 of 2: Choose Your Time</p>
+              <h2 class="calendar-title">Retirement Clarity Call with Jeb Graham</h2>
+            </div>
+          </div>
+          <div class="calendar-meta">
+            <div class="cal-meta-item">
+              <span class="cal-meta-icon">&#128336;</span>
+              45 minutes
+            </div>
+            <div class="cal-meta-item">
+              <span class="cal-meta-icon">&#128222;</span>
+              Phone call
+            </div>
+            <div class="cal-meta-item">
+              <span class="cal-meta-icon">&#127775;</span>
+              Complimentary. No cost, no commitment.
+            </div>
+          </div>
+        </div>
+
+        <div class="calendar-embed-container">
+          <!--booking calendar inline widget begin -->
+          <script type="text/javascript" src="https://cdn.oncehub.com/cal/embed.js" async></script>
+          <div data-oh-booking-calendar-id="BKC-8DJN19QE5G" style="min-width:320px;height:700px;"></div>
+          <!--booking calendar inline widget end -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Happens Next -->
+  <section class="next-steps">
+    <div class="container">
+      <div class="next-steps-inner">
+        <p class="steps-label">After You Book</p>
+        <h2 class="steps-heading">What to expect on your call</h2>
+        <div class="step-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Check your inbox for a confirmation</h4>
+              <p>You'll get an email with call details and a calendar invite right after you book. Check spam if you don't see it within a few minutes.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>We'll send you a reminder text</h4>
+              <p>You opted in to receive SMS messages, so we'll send you a reminder the day before your call. Reply STOP at any time to opt out.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Jeb will call you at the scheduled time</h4>
+              <p>No prep required. Just be somewhere quiet. The call is 45 minutes and covers your Social Security timing, income plan, and Medicare options.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>You'll leave with a clear next step</h4>
+              <p>Not a sales pitch. A real plan for what to do before you retire. No cost. No commitment. Just clarity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+        <p class="footer-ria">Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners) is a registered investment adviser. Registration does not imply a certain level of skill or training.</p>
+        <p class="footer-sms">&copy; Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners). All rights reserved. | Reply STOP to opt out of SMS at any time.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
