@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
   <title>Schedule Your Retirement Clarity Call — Metcalf Partners</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap');
@@ -284,17 +283,25 @@
     .consent-error { font-size: 0.75rem; color: var(--error); margin-top: 0.2rem; display: none; }
     .consent-error.show { display: block; }
 
-    .a2p-disclosure {
-      font-size: 0.6875rem;
+    .sms-disclosure {
+      background: #F9F9F9;
+      border: 1px solid #E0E0E0;
+      border-radius: var(--radius);
+      padding: 0.875rem;
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
       color: var(--gray-500);
       line-height: 1.6;
-      padding: 0.75rem;
-      background: var(--gray-100);
-      border-radius: var(--radius);
-      margin-bottom: 1rem;
-      border: 1px solid #E8E8E8;
     }
-    .a2p-disclosure a { color: var(--gold); }
+    .sms-disclosure-title {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gray-700);
+      margin-bottom: 0.375rem;
+    }
+    .sms-disclosure a { color: var(--gold); text-decoration: underline; }
 
     .btn-submit {
       width: 100%;
@@ -719,10 +726,9 @@
               <label class="checkbox-row">
                 <input type="checkbox" id="smsConsent" name="smsConsent">
                 <span class="checkbox-text">
-                  I agree to receive recurring automated SMS text messages from Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners) about appointment reminders and financial planning updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help.
+                  I agree to receive recurring automated SMS text messages from Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners) at the mobile number provided above. Messages include appointment reminders, follow-up notifications, and financial planning updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms &amp; Conditions</a>. Consent is not a condition of purchase.
                 </span>
               </label>
-              <div class="consent-error" id="sms-consent-error">SMS consent is required to continue.</div>
             </div>
 
             <!-- Checkbox 2: Terms & Privacy -->
@@ -736,9 +742,9 @@
               <div class="consent-error" id="terms-consent-error">You must agree to the terms to continue.</div>
             </div>
 
-            <!-- A2P Required Disclosure -->
-            <div class="a2p-disclosure">
-              By checking the SMS box above and submitting this form, you consent to receive automated SMS text messages from <strong>Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners)</strong> at the mobile number you provided. Messages relate to Metcalf Partners Financial Updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. Reply HELP for help. Carriers are not liable for delayed or undelivered messages. Your information will not be sold or shared with third parties for marketing purposes.
+            <div class="sms-disclosure">
+              <p class="sms-disclosure-title">SMS Program Details</p>
+              <p>By checking the box above and submitting this form, you consent to receive automated SMS text messages from Jebtha C. Graham Wealth Management, LLC (d/b/a Metcalf Partners) at the mobile number you provided. Messages relate to Metcalf Partners Financial Updates, including appointment reminders, follow-up notifications, and scheduling confirmations related to financial planning consultations. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. Reply HELP for help. Carriers are not liable for delayed or undelivered messages. Your information will not be sold or shared with third parties for marketing purposes. View our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms &amp; Conditions</a>. Consent to receive SMS is not required to use our services or schedule a consultation.</p>
             </div>
 
             <button type="submit" class="btn-submit" id="submit-btn">Book My Call Now &#8594;</button>
@@ -911,10 +917,8 @@
     valid = setFieldError('email',    'email-error',     !validateEmail(email)) && valid;
     valid = setFieldError('phone',    'phone-error',     !validatePhone(phone)) && valid;
 
-    const smsErr   = document.getElementById('sms-consent-error');
+    // SMS consent is OPTIONAL — do not block form submission
     const termsErr = document.getElementById('terms-consent-error');
-    if (!smsOk)   { smsErr.classList.add('show');   valid = false; }
-    else            smsErr.classList.remove('show');
     if (!termsOk) { termsErr.classList.add('show'); valid = false; }
     else            termsErr.classList.remove('show');
 
@@ -925,7 +929,8 @@
 
     const payload = {
       firstName, lastName, email, phone,
-      smsConsent: true, termsConsent: true,
+      smsConsent: smsOk,
+      termsConsent: true,
       source: 'a2p-opt-in-site',
       timestamp: new Date().toISOString()
     };
@@ -936,7 +941,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      if (res.ok || res.status === 200 || res.status === 201 || res.status === 202) {
+      if (res.ok || res.status === 0 || res.status === 200 || res.status === 201 || res.status === 202) {
         window.location.href = 'thank-you.html';
       } else {
         throw new Error('status ' + res.status);
@@ -955,9 +960,6 @@
       const e = document.getElementById(id+'-error');
       if (e) e.classList.remove('show');
     });
-  });
-  document.getElementById('smsConsent').addEventListener('change', function() {
-    if (this.checked) document.getElementById('sms-consent-error').classList.remove('show');
   });
   document.getElementById('termsConsent').addEventListener('change', function() {
     if (this.checked) document.getElementById('terms-consent-error').classList.remove('show');
